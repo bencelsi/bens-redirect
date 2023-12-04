@@ -13,8 +13,23 @@
         <link rel='icon' type='image/x-icon' href='favicon.ico'>
     </head>
     <body !-- style="background: pink" -->
+        <a href="file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/bens-homepage/index.html">hello</a>
+        
+        file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/bens-homepage/index.html
         <a href="https://bencelsi.github.io/">
             <img src="mars.gif" style="display: block; margin-left: auto; margin-right: auto;">
         </a>
+        <button onclick="myFunction()">Copy text</button>
     </body>
+    <script>
+        function myFunction() {
+            
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(
+                "file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/bens-homepage/index.html"
+            );
+            window.open("file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/bens-homepage/index.html", '_blank').focus();
+            console.log('ok')
+            } 
+    </script>
 </html>
