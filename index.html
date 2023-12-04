@@ -17,7 +17,7 @@
                 text-align: center
             }
             button {
-                color: red;
+
             }
         </style>
     </head>
@@ -29,26 +29,95 @@
                 <img src="mars.gif" style="float: right">
             </div>
         </h1>
-        <div>
-            <button onclick="newTabLocal('bens-homepage/index.html')">
-                🌘 Homepage
-            </button>
-            <button onclick="newTab('https://bencelsi.github.io')">
-                🌎 Website
-            </button>
-            <button onclick="newTabLocal('bencelsi.github.io/index.html')">
-                🌎 Website (local)
-            </button>
-            <button onclick="newTabLocal('bens-redirect/index.html')">
-                🔴 Redirect (local)
-            </button>
+        <div> 
+            <table style="margin: auto">
+                <tr>
+                    <th>Live</th>
+                    <th>Local</th>
+                    <th>Github</th>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="newTab('https://bencelsi.github.io')">
+                            🌎 Website
+                        </button>
+                    </td><td>
+                        <button onclick="newTabLocal('bencelsi.github.io/index.html')">
+                            🌎 Website (Local)
+                        </button>
+                    </td><td>
+                        <button onclick="newTab('https://github.com/bencelsi/bencelsi.github.io')">
+                            🌎 Website (Github)
+                        </button>  
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="newTab('https://bencelsi.github.io/bens-redirect/')">
+                            🔴 Redirect
+                        </button>
+                    </td><td>
+                        <button onclick="newTabLocal('bens-redirect/index.html')">
+                            🔴 Redirect (Local)
+                        </button>
+                    </td><td>
+                        <button onclick="newTab('https://github.com/bencelsi/bens-redirect')">
+                            🔴 Redirect (Github)
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>
+                        N/A
+                    </td><td>
+                        <button onclick="newTabLocal('bens-homepage/index.html')">
+                            🌘 Homepage (local)
+                        </button>
+                    </td>
+                    <td>
+                        N/A
+                    </td>
+                </tr><tr>
+                    <td>
+                        <button onclick="newTab('https://bencelsi.github.io/tetriven')">
+                            🇹 Tetriven
+                        </button>
+                    </td><td>
+                        <button onclick="newTabLocal('tetriven/index.html')">
+                            🇹 Tetriven (Local)
+                        </button>
+                    </td><td>
+                        <button onclick="newTab('https://github.com/bencelsi/tetriven')">
+                            🇹 Tetriven (Github)
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>
+                        <button onclick="newTab('https://bencelsi.github.io/automata')">
+                            🏁 Automata
+                        </button>
+                    </td><td>
+                        <button onclick="newTabLocal('automata/index.html')">
+                            🏁 Automata (Local)
+                        </button>
+                    </td><td>
+                        <button onclick="newTab('https://github.com/bencelsi/automata')">
+                            🏁 Automata (Github)
+                        </button>
+                    </td>
+                </tr>
+            </table>
+            
+
+
         </div>
         <div>
             <!-- 
                 🇹 tetriven
                 🐑 catan o rama 
                 🏁 automata
-                s
+                🪦 dead end
+                👆 point and clicks
+                🍌 nabanagrams
             -->
         </div>
     </body>
