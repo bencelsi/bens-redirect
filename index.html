@@ -11,26 +11,39 @@
         <title>Redirect</title>
         <meta charset="UTF-8" />
         <link rel='icon' type='image/x-icon' href='favicon.ico'>
+        <style>
+            body {
+                background-color: pink
+            }
+            button {
+                color: red
+            }
+        </style>
     </head>
-    <body !-- style="background: pink" -->
+    <body>
+        <h1>
+            Redirect
+        </h1>
         <img src="mars.gif" style="display: block; margin-left: auto; margin-right: auto;">
-        <button onclick="newTabLocal('file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/bens-homepage/index.html')">
+        <button onclick="newTabLocal('bens-homepage/index.html')">
             Homepage
         </button>
         <button onclick="newTab('https://bencelsi.github.io')">
             Website
         </button>
-        <button onclick="newTabLocal('file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/bencelsi.github.io/index.html')">
+        <button onclick="newTabLocal('bencelsi.github.io/index.html')">
             Website (local)
+        </button>
+        <button onclick="newTabLocal('bens-redirect/index.html')">
+            Redirect (local)
         </button>
     </body>
     <script>
         function newTab(url) {
-            // Copy the text inside the text field
             window.open(url, '_blank').focus();
         } 
-        function newTabLocal(url) {
-            // Copy the text inside the text field
+        function newTabLocal(path) {
+            let url = 'file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/' + path
             navigator.clipboard.writeText(url);
             window.open("about:blank", '_blank').focus();
         } 
