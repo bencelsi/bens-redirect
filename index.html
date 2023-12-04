@@ -13,30 +13,44 @@
         <link rel='icon' type='image/x-icon' href='favicon.ico'>
         <style>
             body {
-                background-color: pink
+                background-color: pink;
+                text-align: center
             }
             button {
-                color: red
+                color: red;
             }
         </style>
     </head>
     <body>
         <h1>
-            Redirect
+            <div style='display: inline-block; margin: auto'>
+                <img src="mars.gif" style="float: left">
+                Redirect
+                <img src="mars.gif" style="float: right">
+            </div>
         </h1>
-        <img src="mars.gif" style="display: block; margin-left: auto; margin-right: auto;">
-        <button onclick="newTabLocal('bens-homepage/index.html')">
-            Homepage
-        </button>
-        <button onclick="newTab('https://bencelsi.github.io')">
-            Website
-        </button>
-        <button onclick="newTabLocal('bencelsi.github.io/index.html')">
-            Website (local)
-        </button>
-        <button onclick="newTabLocal('bens-redirect/index.html')">
-            Redirect (local)
-        </button>
+        <div>
+            <button onclick="newTabLocal('bens-homepage/index.html')">
+                🌘 Homepage
+            </button>
+            <button onclick="newTab('https://bencelsi.github.io')">
+                🌎 Website
+            </button>
+            <button onclick="newTabLocal('bencelsi.github.io/index.html')">
+                🌎 Website (local)
+            </button>
+            <button onclick="newTabLocal('bens-redirect/index.html')">
+                🔴 Redirect (local)
+            </button>
+        </div>
+        <div>
+            <!-- 
+                🇹 tetriven
+                🐑 catan o rama 
+                🏁 automata
+                s
+            -->
+        </div>
     </body>
     <script>
         function newTab(url) {
