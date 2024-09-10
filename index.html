@@ -13,10 +13,9 @@
         <link rel='icon' type='image/x-icon' href='favicon.ico'>
         <style>
             body {
-                background-color: pink;
+                background-color: blue;
                 text-align: center
             }
-            button { }
         </style>
     </head>
     <body>
@@ -40,7 +39,7 @@
                             🌎 Website
                         </button>
                     </td><td>
-                        <button onclick="alert(file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/bens-homepage/homepage.html)">
+                        <button onclick="alert('file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/bens-homepage/homepage.html')">
                             🌎 Website (Local)
                         </button>
                     </td><td>
@@ -67,7 +66,7 @@
                     <td>
                         N/A
                     </td><td>
-                        <button onclick="newTabLocal('bens-homepage/index.html')">
+                        <button onclick="redirect('bens-homepage/index.html')">
                             🌘 Homepage (local)
                         </button>
                     </td>
@@ -137,13 +136,21 @@
         </div>
     </body>
     <script>
+        const rootDir = "file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/"
         function newTab(url) {
             window.open(url, '_blank').focus();
         } 
         function newTabLocal(path) {
-            let url = 'file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/' + path
+            let url = rootDir + path
             navigator.clipboard.writeText(url);
             window.open("about:blank", '_blank').focus();
         } 
+
+        function redirect(path) {
+            if (window.confirm('Entering ' + path)) 
+            {
+                window.location.href = rootDir + path;
+            };
+        }
     </script>
 </html>
