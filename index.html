@@ -12,7 +12,7 @@ body {
     background-image: url(stars.gif); color: white;
     text-align: center;
 }
-a { color: mediumvioletred;  }
+a { color: mediumvioletred }
 </style>
 </head>
 <body>
@@ -20,8 +20,11 @@ a { color: mediumvioletred;  }
         <h1>Social Media is the Mind-Killer</h1>
         <img src="brainspin.gif">
         <br><br>
-        <h1><a href="file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/bens-homepage/homepage.html">
-            Try Instead</a></h1>
+        <!-- <h1><a href="file:///Users/bencelsi/LocalDrive/CODE%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2%E2%80%A2/github/bens-homepage/homepage.html">
+            Try Instead</a></h1> -->
+        <button onclick="closeMe()">Close This Tab</button>
+        <a href="#" onclick="close_window();return false;">close</a>
+
     </div>
 </body>
 <script>
@@ -29,6 +32,17 @@ a { color: mediumvioletred;  }
     function newTab(url) {
         window.open(url, '_blank').focus();
     } 
+
+    function closeMe() {
+        close();
+    }
+
+    function close_window() {
+        location.href = "https://bruh.io";
+        if (confirm("Close Window?")) {
+            close();
+        }
+    }
     function newTabLocal(path) {
         let url = rootDir + path
         navigator.clipboard.writeText(url);
